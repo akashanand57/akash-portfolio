@@ -1,0 +1,23 @@
+[
+    {
+      "title": "E-Book",
+      "imageSrc": "projects/ebook.png",
+      "description": "",
+      "skills": ["Java", "JavaScript", "React", "SQL"],
+      "source": "https://github.com/akashanand57"
+    },
+    {
+      "title": "Front Desk",
+      "imageSrc": "projects/frontdesk.png",
+      "description": "",
+      "skills": ["Java", "JavaScript", "React", "SQL"],
+      "source": "https://github.com/akashanand57"
+    },
+    {
+      "title": "Portfolio",
+      "imageSrc": "projects/p.png",
+      "description": "",
+      "skills": ["HTML", "CSS", "JavaScript", "React"],
+      "source": "https://github.com/akashanand57"
+    }
+  ]

@@ -1,0 +1,26 @@
+[
+    {
+      "role": "Java Full Stack Development",
+      "organisation": "Qspiders",
+      "startDate": "Jan, 2024",
+      "endDate": "Present",
+      "experiences": ["Worked on Java, Web Technologies and Database"],
+      "imageSrc": "history/qspiders.png"
+    },
+    {
+      "role": "B.Tech CSE",
+      "organisation": "CT Group Of Instituions",
+      "startDate": "2020",
+      "endDate": "2024",
+      "experiences": ["Bachelor of Technology in Computer Science"],
+      "imageSrc": "history/ct.png"
+    },
+    {
+      "role": "Secondary Education",
+      "organisation": "VVIPS, Aurangabad",
+      "startDate": "2018",
+      "endDate": "2020",
+      "experiences": [""],
+      "imageSrc": "history/cbse.png"
+    }
+  ]
