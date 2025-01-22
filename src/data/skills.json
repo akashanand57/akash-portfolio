@@ -16,6 +16,14 @@
       "imageSrc": "skills/react.png"
     },
     {
+      "title": "TypeScript",
+      "imageSrc": "skills/typescript.png"
+    },
+    {
+      "title": "Angular",
+      "imageSrc": "skills/angularjs.png"
+    },
+    {
       "title": "JAVA",
       "imageSrc": "skills/java.png"
     },

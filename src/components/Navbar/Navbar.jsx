@@ -38,6 +38,10 @@ export const Navbar = () => {
           <li>
             <a href="#contact">Contact</a>
           </li>
+          {/* Add a Resume download button */}
+          <li>
+            <a href="/assets/about/Resume_Akash.pdf" download="Resume.pdf">Resume</a>
+          </li>
         </ul>
       </div>
     </nav>

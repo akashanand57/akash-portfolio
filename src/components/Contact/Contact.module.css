@@ -1,5 +1,6 @@
-@import "../../vars.css";
+@import "../../vars.css";  
 
+/* Container Styles */
 .container {
   color: var(--color-text);
   margin-top: 120px;
@@ -7,23 +8,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100vw;
+  width: 100%;
   padding: 58px 10%;
   gap: 10px;
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: 5vw; /* Use relative units for responsiveness */
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .text p {
-  font-size: 40px;
+  font-size: 2vw; /* Use relative units for responsiveness */
   font-weight: 400;
   letter-spacing: 2px;
 }
 
+/* Links Section */
 .links {
   display: flex;
   flex-direction: column;
@@ -41,15 +43,37 @@
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 1.5vw; /* Use relative units for responsiveness */
   font-weight: 400;
   letter-spacing: 1.5px;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 40px 8%;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .text h2 {
+    font-size: 6vw; /* Slightly smaller font size on medium screens */
+  }
+
+  .text p {
+    font-size: 3vw; /* Slightly smaller font size on medium screens */
+  }
+
+  .link a {
+    font-size: 2vw; /* Adjust font size accordingly */
+  }
 }
 
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
     gap: 23px;
+    padding: 40px 5%;
   }
 
   .text {
@@ -61,4 +85,36 @@
   .links {
     align-items: center;
   }
+
+  .text h2 {
+    font-size: 8vw; /* Larger font size for smaller screens */
+  }
+
+  .text p {
+    font-size: 4vw; /* Larger font size for smaller screens */
+  }
+
+  .link a {
+    font-size: 3.5vw; /* Larger font size for smaller screens */
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 30px 5%;
+    gap: 15px;
+  }
+
+  .text h2 {
+    font-size: 10vw; /* Even larger font size for very small screens */
+  }
+
+  .text p {
+    font-size: 5vw; /* Even larger font size for very small screens */
+  }
+
+  .link a {
+    font-size: 4vw; /* Adjust font size for very small screens */
+  }
+}
+

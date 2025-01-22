@@ -9,7 +9,7 @@ export const About = () => {
       <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <img
-          src={getImageUrl("about/aboutImage.png")}
+          src={getImageUrl("about/Software.jpg")}
           alt="Me sitting with a laptop"
           className={styles.aboutImage}
         />
@@ -39,7 +39,7 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Database</h3>
               <p>
-                I have learned Java database connectivity.
+              Skilled in Database Connectivity for efficient data access and manipulation.
               </p>
             </div>
           </li>
