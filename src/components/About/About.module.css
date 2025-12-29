@@ -2,13 +2,13 @@
 
 .container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
+  background-color: rgba(12, 12, 12, 0.177);
   border-radius: 15px;
   padding: 73px;
   margin-top: 129px;
-  z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+  z-index: 1;
 }
 
 .title {
@@ -17,29 +17,35 @@
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .aboutImage {
   width: 35%;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .aboutItems {
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
+  flex: 1;
 }
 
 .aboutItem {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 20px;
   list-style: none;
   padding: 25px;
@@ -50,31 +56,47 @@
   );
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: 0.4s;
+  transition: all 0.4s ease, transform 0.3s ease;
+  cursor: default;
 }
 
 .aboutItem:hover {
   background-size: 100% 100%;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.aboutItem h3 {
+.aboutItem img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.aboutItemText h3 {
   font-size: 25px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.aboutItem p {
-  font-size: 25px;
+.aboutItemText p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
 }
 
+/* Responsive */
 @media screen and (max-width: 830px) {
   .container {
     background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .content {
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
   .aboutImage {
@@ -82,11 +104,20 @@
   }
 
   .aboutItems {
-    margin-top: 29px;
+    margin-top: 20px;
+    width: 100%;
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aboutItemText h3 {
+    font-size: 22px;
+  }
+
+  .aboutItemText p {
+    font-size: 16px;
   }
 }

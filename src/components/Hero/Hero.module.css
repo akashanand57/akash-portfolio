@@ -1,29 +1,33 @@
 @import "../../vars.css";
 
+/* ================= Hero Section Container ================= */
 .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
-  z-index: 1;
+  min-height: 100vh; /* Full screen */
   margin-left: 10%;
   margin-right: 10%;
+  gap: 2rem;
+  z-index: 1;
 }
 
+/* ================= Hero Text Content ================= */
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: var(--color-text);
-  z-index: 1;
+  z-index: 2;
 }
 
 .title {
-  font-size: 72px;
-  font-weight: 900;
-  margin-bottom: 33px;
   font-family: var(--font-roboto);
+  font-weight: 700; /* Match other pages */
+  letter-spacing: 1.5px; /* Consistent spacing */
+  font-size: 72px;
+  margin-bottom: 20px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 70%,
@@ -34,77 +38,138 @@
 }
 
 .description {
-  font-size: 30px;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  font-weight: 500; /* Match other sections */
+  font-size: 25px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+  color: var(--color-text);
 }
 
+/* ================= Contact Button ================= */
 .contactBtn {
   text-decoration: none;
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 100px;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
-  padding: 17px 26px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 15px 26px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contactBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #0ea5e9;
+}
+
+/* ================= Hero Image ================= */
+.imageWrapper {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.imageBlob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
 }
 
 .heroImg {
-  width: 50%;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   z-index: 1;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: floatingRotate 6s ease-in-out infinite;
 }
 
-@keyframes floating {
+@keyframes floatingRotate {
   0% {
-    transform: translate(0, 0px);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translate(0, 10px);
+    transform: translateY(-15px) rotate(3deg);
   }
   100% {
-    transform: translate(0, -0px);
+    transform: translateY(0px) rotate(0deg);
   }
+}
+
+/* ================= Background Blurs ================= */
+.topBlur,
+.bottomBlur {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(120px);
+  z-index: 0;
 }
 
 .topBlur {
-  position: absolute;
   width: 50vw;
   height: 50vw;
   min-width: 350px;
-  min-width: 350px;
   top: -128px;
   left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
 .bottomBlur {
-  position: absolute;
   width: 70vw;
   height: 50vw;
-  min-width: 350px;
   min-width: 250px;
   top: 246px;
   right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
+/* ================= Responsive ================= */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 1.5rem;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .contactBtn {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .imageWrapper {
+    width: 70%;
+  }
+
+  .heroImg {
+    width: 250px;
+  }
+
+  .imageBlob {
+    width: 250px;
+    height: 250px;
   }
 }
