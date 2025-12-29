@@ -40,7 +40,7 @@ export const Navbar = () => {
           </li>
           {/* Add a Resume download button */}
           <li>
-            <a href="/assets/about/Resume_Akash.pdf" download="Resume.pdf">Resume</a>
+            <a href="/Resume_Akash.pdf" download="Resume.pdf">Resume</a>
           </li>
         </ul>
       </div>
